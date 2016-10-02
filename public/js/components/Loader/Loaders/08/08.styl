@@ -1,0 +1,37 @@
+color-fg = #ecf0f1
+box-size-default = 60px
+border-size-default = 6px
+
+.loader--08
+  width box-size-default
+  height box-size-default
+  background-color transparent
+  border border-size-default solid color-fg
+  position relative
+  animation loading--08 3s linear infinite alternate forwards
+
+  &:before
+    content ''
+    width (box-size-default - 20px)
+    height (box-size-default - 20px)
+    left 10px
+    top 10px
+    background-color color-fg
+    position absolute
+    animation loading--08 3s linear infinite alternate forwards
+
+@keyframes loading--08
+  0%
+    border-radius 0% 0% 0% 0%
+  12.5%
+    border-radius 0% 0% 0% 50%
+  25%
+    border-radius 0% 50% 0% 50%
+  50%
+    border-radius 50% 50% 50% 50%
+  75%
+    border-radius 50% 0% 50% 0%
+  87.5%
+    border-radius 50% 0% 0% 0%
+  100%
+    border-radius 0% 0% 0% 0%

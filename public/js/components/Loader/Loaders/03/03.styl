@@ -1,0 +1,29 @@
+color-fg = #ecf0f1
+loader-width-default = 100px
+loader-height-default = 10px
+bar-width-default = 10px
+
+.loader--03
+  width loader-width-default
+  height loader-height-default
+  border 1px solid color-fg
+  position relative
+
+  &:before
+    content ' '
+    display block
+    width bar-width-default
+    height loader-height-default
+    position absolute
+    animation loading--3 ease-in-out 1.25s alternate infinite
+    background-color color-fg
+
+@keyframes loading--3
+  0%
+    left 0
+    width bar-width-default
+  50%
+    width bar-width-default * 3
+  100%
+    left (loader-width-default - bar-width-default)
+    width bar-width-default

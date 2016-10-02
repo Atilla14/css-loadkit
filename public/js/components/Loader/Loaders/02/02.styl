@@ -1,0 +1,19 @@
+color-fg = #ecf0f1
+gap-width-default = 8px
+box-width-default = 8px
+
+.loader--02
+  height gap-width-default
+  width gap-width-default
+  box-shadow (box-width-default * -2) (box-width-default * -2) 0 box-width-default color-fg, (box-width-default * -2) (box-width-default * -2) 0 box-width-default color-fg, (box-width-default * -2) (box-width-default * -2) 0 box-width-default color-fg, (box-width-default * -2) (box-width-default * -2) 0 box-width-default color-fg
+  animation loading--02 1.5s infinite alternate
+
+@keyframes loading--02
+  0%
+    box-shadow (box-width-default * -2) (box-width-default * -2) 0 box-width-default color-fg, (box-width-default * -2) (box-width-default * -2) 0 box-width-default color-fg, (box-width-default * -2) (box-width-default * -2) 0 box-width-default color-fg, (box-width-default * -2) (box-width-default * -2) 0 box-width-default color-fg
+  33.33%
+    box-shadow (box-width-default * -2) (box-width-default * -2) 0 box-width-default color-fg, (box-width-default * 2) (box-width-default * -2) 0 box-width-default color-fg, (box-width-default * 2) (box-width-default * -2) 0 box-width-default color-fg, (box-width-default * 2) (box-width-default * -2) 0 box-width-default color-fg
+  66.66%
+    box-shadow (box-width-default * -2) (box-width-default * -2) 0 box-width-default color-fg, (box-width-default * 2) (box-width-default * -2) 0 box-width-default color-fg, (box-width-default * 2) (box-width-default * 2) 0 box-width-default color-fg, (box-width-default * 2) (box-width-default * 2) 0 box-width-default color-fg
+  100%
+    box-shadow (box-width-default * -2) (box-width-default * -2) 0 box-width-default color-fg, (box-width-default * 2) (box-width-default * -2) 0 box-width-default color-fg, (box-width-default * 2) (box-width-default * 2) 0 box-width-default color-fg, (box-width-default * -2) (box-width-default * 2) 0 box-width-default color-fg

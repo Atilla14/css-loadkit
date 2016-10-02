@@ -1,0 +1,32 @@
+color-fg = #ecf0f1
+dot-size-default = 20px
+
+.loader--04
+  width (dot-size-default * 9)
+  height dot-size-default
+  display flex
+  justify-content space-between
+
+  .dot
+    width dot-size-default
+    height dot-size-default
+    background-color color-fg
+    transform scale(0.5)
+    opacity 0.5
+    display inline-block
+    border-radius 100%
+
+    for num in (1..4)
+      &:nth-child({num})
+        animation loading--04 900ms ease-in-out infinite (150ms * num)
+
+@keyframes loading--04
+  0%
+    transform scale(0.5)
+    opacity 0.5
+  50%
+    transform scale(1.2)
+    opacity 1
+  100%
+    transform scale(0.5)
+    opacity 0.5

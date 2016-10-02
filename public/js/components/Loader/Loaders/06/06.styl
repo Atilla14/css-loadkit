@@ -1,0 +1,31 @@
+color-fg = #ecf0f1
+cell-size-default = 20px
+cell-padding-default = 4px
+
+.loader--06
+  width (3 * cell-size-default) + (2 * cell-padding-default)
+  height (3 * cell-size-default) + (2 * cell-padding-default)
+  padding 0
+  margin 0
+  position relative
+
+for num in (1..9)
+  .cell
+    &:nth-child({num})
+      margin 0
+      padding 0
+      width cell-size-default
+      height cell-size-default
+      display inline-block
+      background-color color-fg
+      position absolute
+      left (((((num - 1) / 3) - (floor((num - 1) / 3))) * 3) * (cell-size-default + cell-padding-default))px
+      top (floor((num - 1) / 3)) * (cell-size-default + cell-padding-default)
+      animation loading--06 800ms ease-in-out infinite alternate (30ms * (num + 10))
+
+
+@keyframes loading--06
+  0%
+    transform rotate3d(0, 0, 0, 0deg)
+  100%
+    transform rotate3d(-1, 1, 0, 180deg)
