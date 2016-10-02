@@ -1,0 +1,17 @@
+ring-width-default = 5px
+ring-radius-default = 20px
+
+.loader--01
+  width (ring-radius-default * 2)
+  height (ring-radius-default * 2)
+  border ring-width-default solid transparent
+  border-top-color white
+  border-bottom-color white
+  border-radius 50%
+  animation loading--01 1.2s linear infinite
+
+@keyframes loading--01
+  from
+    transform rotate(0deg)
+  to
+    transform rotate(720deg)
