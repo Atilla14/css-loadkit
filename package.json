@@ -1,0 +1,44 @@
+{
+  "name": "css-loadkit",
+  "version": "1.0.0",
+  "description": "A Collection of CSS loaders",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack --progress && node app.js",
+    "dev": "webpack-dev-server --content-base public --progress --port 5001"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Atilla14/css-loadkit.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Atilla14/css-loadkit/issues"
+  },
+  "homepage": "https://github.com/Atilla14/css-loadkit#readme",
+  "dependencies": {
+    "express": "^4.14.0",
+    "react": "^15.3.2",
+    "react-dom": "^15.3.2",
+    "react-redux": "^4.4.5",
+    "redux": "^3.6.0"
+  },
+  "devDependencies": {
+    "autoprefixer": "^6.5.0",
+    "babel-core": "^6.16.0",
+    "babel-loader": "^6.2.5",
+    "babel-preset-es2015": "^6.16.0",
+    "babel-preset-react": "^6.16.0",
+    "css-loader": "^0.25.0",
+    "nib": "^1.1.2",
+    "poststylus": "^0.2.3",
+    "rucksack-css": "^0.8.6",
+    "style-loader": "^0.13.1",
+    "stylus": "^0.54.5",
+    "stylus-loader": "^2.3.1",
+    "webpack": "^1.13.2",
+    "webpack-dev-server": "^1.16.1"
+  }
+}
