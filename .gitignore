@@ -38,3 +38,6 @@ jspm_packages
 
 # For mac DS store file
 .DS_Store
+
+# Heroku
+Procfile
