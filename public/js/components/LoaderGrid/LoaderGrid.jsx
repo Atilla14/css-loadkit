@@ -11,7 +11,11 @@ class LoaderGrid extends React.Component {
         '05',
         '06',
         '07',
-        '08'
+        '08',
+        '09',
+        '10',
+        '11',
+        '12'
       ]
       let loaders = loadersNum.map((num) => <LoaderCell value={num} key={parseInt(num)}/>)
       return <div className='loader-grid'>
