@@ -1,10 +1,11 @@
 var poststylus = require('poststylus')
+var path = require('path')
 
 module.exports = {
   context: __dirname,
   entry: './public/js/App.jsx',
   output: {
-    path: __dirname + './public/',
+    path: path.join(__dirname, './public/'),
     filename: 'bundle.js'
   },
   resolve: {
