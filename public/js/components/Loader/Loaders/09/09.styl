@@ -1,0 +1,31 @@
+color-fg = #ecf0f1
+circle-radius-default = 30px
+ring-width-default = 5px
+
+.loader--09
+  width (circle-radius-default * 2)
+  height (circle-radius-default * 2)
+  border ring-width-default solid rgba(color-fg, 0.0)
+  border-top-color color-fg
+  box-sizing content-box
+  border-radius 100%
+  position relative
+  animation loading--09 1s linear forwards infinite
+
+  &:before
+    content ''
+    height (circle-radius-default - (2 * ring-width-default)) * 2
+    width (circle-radius-default - (2 * ring-width-default)) * 2
+    display block
+    position absolute
+    background-color color-fg
+    left ring-width-default * 2
+    top ring-width-default * 2
+    border-right-color color-fg
+    border-radius 100%
+
+@keyframes loading--09
+  0%
+    transform rotate(0deg)
+  100%
+    transform rotate(360deg)

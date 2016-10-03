@@ -1,0 +1,37 @@
+color-fg = #ecf0f1
+atom-radius-default = 30px
+
+.loader--11
+  width (atom-radius-default * 2)
+  height (atom-radius-default * 2)
+  position relative
+  transform rotateZ(45deg)
+  perspective 1000
+
+  &:before, &:after
+    content ''
+    width (atom-radius-default * 2)
+    height (atom-radius-default * 2)
+    display inline-block
+    position absolute
+    border-radius 100%
+
+   &:before
+     border-top 10px solid color-fg
+     animation loading--11-1 1.7s ease-in-out infinite
+
+   &:after
+     border-bottom 10px solid color-fg
+     animation loading--11-2 1.7s ease-in-out infinite
+
+@keyframes loading--11-1
+  0%
+    transform rotateY(45deg) rotate(0deg)
+  100%
+    transform rotateY(45deg) rotate(1080deg)
+
+ @keyframes loading--11-2
+   0%
+     transform rotateX(45deg) rotate(0deg)
+   100%
+     transform rotateX(45deg) rotate(1080deg)

@@ -1,0 +1,29 @@
+color-fg = #ecf0f1
+dot-radius-default = 10px
+jump-height-default = 20px
+
+.loader--10
+  width (dot-radius-default * 9)
+  height auto
+  position relative
+  background-color transparent
+
+  for num in (1 2 3)
+    .dot
+      &:nth-child({num})
+        width (dot-radius-default * 2)
+        height (dot-radius-default * 2)
+        background-color color-fg
+        border-radius 100%
+        display inline-block
+        position absolute
+        left (dot-radius-default * 3 * (num - 1))
+        animation loading--10 600ms linear infinite forwards (100ms * num)
+
+@keyframes loading--10
+  0%
+    transform translateY(0)
+  30%
+    transform translateY(-(jump-height-default))
+  100%
+    transform translateY(0)
