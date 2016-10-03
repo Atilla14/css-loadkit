@@ -6,9 +6,9 @@ require('./loaderCell.styl')
 class LoaderCell extends React.Component {
   render() {
     return <div className='loader-container'>
-      <Loader value={this.props.value}/>
+      <Loader value={this.props.value} />
       <div className='loader-mask'>
-        <button className='loader-code'><i className='icon-code'></i></button>
+        <a target='_blank' href={this.props.url} className='loader-code'><i className='icon-code'></i></a>
       </div>
     </div>
   }

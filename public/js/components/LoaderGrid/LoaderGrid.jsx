@@ -1,23 +1,10 @@
 import React from 'react'
 import LoaderCell from '../LoaderCell/LoaderCell'
+import LoadersConf from '../Loader/loaders'
 
 class LoaderGrid extends React.Component {
     render() {
-      let loadersNum = [
-        '01',
-        '02',
-        '03',
-        '04',
-        '05',
-        '06',
-        '07',
-        '08',
-        '09',
-        '10',
-        '11',
-        '12'
-      ]
-      let loaders = loadersNum.map((num) => <LoaderCell value={num} key={parseInt(num)}/>)
+      let loaders = LoadersConf.map((loader) => <LoaderCell value={loader.id} key={parseInt(loader.id)} url={loader.url}/>)
       return <div className='loader-grid'>
         {loaders}
       </div>
