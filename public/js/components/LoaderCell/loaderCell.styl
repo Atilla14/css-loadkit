@@ -1,0 +1,47 @@
+color-bg = #e74c3c
+color-fg = #ecf0f1
+
+.loader-container
+  width 25%
+  height 150px
+  float left
+  display inline-flex
+  justify-content center
+  align-items center
+  overflow hidden
+  position relative
+
+  .loader-mask
+    width 100%
+    height 100%
+    left 0
+    top 0
+    position absolute
+    background transparent
+    transform translateY(100px)
+    opacity 0
+    transition all 300ms ease-in-out
+
+    .loader-code
+      width 30px
+      height 50px
+      color color-fg
+      background-color transparent
+      border none
+      border-radius 0
+      display flex
+      justify-content center
+      align-items center
+      font-size 1.2em
+      transform scale(1)
+      transition transform 150ms ease
+
+      &:hover
+        transform scale(1.2)
+
+  &:hover
+    background-color rgba(color-fg, 0.3)
+
+    .loader-mask
+      transform translateY(0)
+      opacity 1

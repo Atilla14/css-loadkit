@@ -1,54 +1,28 @@
-center-size-default = 14px
-padding-width-default = 6px
 color-fg = #ecf0f1
-color-bg = #e74c3c
+bar-width-default = 10px
+bar-height-default = 40px
 
 .loader--05
-  display inline-block
-  width center-size-default
-  height center-size-default
-  position relative
+  width (bar-width-default * 6) + 10px
+  height bar-height-default
+  display flex
+  justify-content center
+  align-items center
 
-  &::before, &::after
-    position absolute
-    -webkit-font-smoothing: none
-
-  &::before
-    content '+'
-    color color-bg
-    font-size 106px
-    height (center-size-default + (1 * padding-width-default))
-    width (center-size-default + (2 * padding-width-default))
-    line-height 0
-    left 0
-    top 0
-    text-indent -17px
-    transform-origin 50% 50%
-    box-shadow 0 0 0 3px color-fg
-    padding-top padding-width-default
-    animation loading--05 2s linear infinite
-
-  &::after
-    content ''
+  .bar
+    width bar-width-default
+    height bar-height-default
     background-color color-fg
-    height center-size-default
-    width center-size-default
-    position absolute
-    top padding-width-default
-    left padding-width-default
+    margin-right 3px
+
+    for num in (1..6)
+      &:nth-child({num})
+        animation loading--05 1s ease-in-out infinite (100ms * num)
 
 @keyframes loading--05
-  0%, 5%
-    transform scale(1) rotate(0deg) translateZ(0)
-  20%, 25%
-    transform scale(1.4) rotate(0deg) translateZ(0)
-  30%, 35%
-    transform scale(1.4) rotate(-90deg) translateZ(0)
-  40%, 50%
-     transform scale(1) rotate(-90deg) translateZ(0)
-  60%, 65%
-    transform scale(1.4) rotate(-90deg) translateZ(0)
-  70%, 75%
-    transform scale(1.4) rotate(0deg) translateZ(0)
-  80%, 100%
-    transform scale(1) rotate(0deg) translateZ(0)
+  0%, 25%
+    transform scaleY(1)
+  50%
+    transform scaleY(2)
+  75%, 100%
+    transform scaleY(1)

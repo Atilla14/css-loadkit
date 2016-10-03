@@ -3,7 +3,12 @@ require('./05.styl')
 
 class Loader05 extends React.Component {
   render() {
-    return <div className='loader--05'></div>
+    const loaderDots = [0,0,0,0,0,0].map((num, index) => {
+      return <div className="bar" key={index}></div>
+    })
+    return <div className="loader--05">
+      {loaderDots}
+    </div>
   }
 }
 

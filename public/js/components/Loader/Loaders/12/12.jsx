@@ -3,7 +3,12 @@ require('./12.styl')
 
 class Loader12 extends React.Component {
   render() {
-    return <div className='loader--12'></div>
+    const loaderDots = [0,0,0,0].map((num, index) => {
+      return <div className="cell" key={index}></div>
+    })
+    return <div className="loader--12">
+      {loaderDots}
+    </div>
   }
 }
 
